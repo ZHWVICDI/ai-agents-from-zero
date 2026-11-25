@@ -17,7 +17,7 @@ except ModuleNotFoundError:
     print("❌ 未找到 redis 包，请先执行：pip install -r requirements.txt")
     raise SystemExit(1)
 
-REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:26379")
 
 print("✅ redis 包导入成功！")
 print(f"✅ redis 包版本：{redis.__version__}")

@@ -33,7 +33,7 @@ except ModuleNotFoundError:
     USE_LANGCHAIN_REDIS = False
 
 # 支持环境变量 REDIS_URL；未设置时默认 localhost:6379（标准 Redis），教程 Docker 可能用 26379
-REDIS_URL = os.getenv("REDIS_URL", "redis://:123456@192.168.180.12:6379/14")
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:26379/0")
 FORCE_SAVE = os.getenv("REDIS_FORCE_SAVE", "0") == "1"
 
 

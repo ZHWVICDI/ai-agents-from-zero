@@ -65,12 +65,18 @@ logger.info(
     REDIS_URL,
 )
 
+# llm = init_chat_model(
+#     model="qwen-plus",
+#     model_provider="openai",
+#     api_key=os.getenv("aliQwen-api"),
+#     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+# )
 llm = init_chat_model(
-    model="qwen-plus",
-    model_provider="openai",
-    api_key=os.getenv("aliQwen-api"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    model="deepseek-v4-flash",
+    api_key=os.getenv("deepseek-api"),
+    base_url="https://api.deepseek.com",
 )
+
 prompt = ChatPromptTemplate.from_messages(
     [MessagesPlaceholder("history"), ("human", "{question}")]
 )

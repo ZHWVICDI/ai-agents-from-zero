@@ -19,11 +19,17 @@ from langchain_core.chat_history import InMemoryChatMessageHistory
 from loguru import logger
 import os
 
+# llm = init_chat_model(
+#     model="qwen-plus",
+#     model_provider="openai",
+#     api_key=os.getenv("aliQwen-api"),
+#     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+# )
+
 llm = init_chat_model(
-    model="qwen-plus",
-    model_provider="openai",
-    api_key=os.getenv("aliQwen-api"),
-    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+    model="deepseek-v4-flash",
+    api_key=os.getenv("deepseek-api"),
+    base_url="https://api.deepseek.com",
 )
 
 # 创建内存版历史实例（BaseChatMessageHistory 的实现）

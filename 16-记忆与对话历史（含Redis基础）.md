@@ -414,6 +414,8 @@ docker run -d --name redis-stack -p 26379:6379 -p 8001:8001 redis/redis-stack
 
 也就是说，Redis Stack 版案例里如果默认连接 `redis://localhost:26379`，是完全正常的，因为它连的是**宿主机映射端口**，不是容器内的原始 `6379`。若你本地镜像或 compose 将 Insight 映到 **8002** 等其他端口，以实际 `docker ps` 或文档为准即可。
 
+PS:只需要安装Redis Stack即可，这里不用先安装Redis Stack；
+
 #### 5.2.4 Redis 基本命令与查看对话历史
 
 这一节不用学成 Redis 专家，只要会看本章案例写进去的数据就够了。
