@@ -27,7 +27,7 @@ embeddings = []
 for text in texts:
     input_data = [{"text": text}]
     resp = dashscope.MultiModalEmbedding.call(
-        model="multimodal-embedding-v1",
+        model="tongyi-embedding-vision-flash",
         api_key=os.getenv("aliQwen-api"),
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         input=input_data,

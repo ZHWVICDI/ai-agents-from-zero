@@ -22,7 +22,7 @@ load_dotenv()
 
 # 1. 初始化嵌入模型
 embeddings = DashScopeEmbeddings(
-    model="text-embedding-v3", dashscope_api_key=os.getenv("aliQwen-api")
+    model="qwen3.7-text-embedding-flash", dashscope_api_key=os.getenv("aliQwen-api")
 )
 
 # 2. 构造 Document 列表：page_content 是正文，metadata 是附加信息

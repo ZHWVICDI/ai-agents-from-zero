@@ -21,7 +21,7 @@ load_dotenv()
 
 # 使用项目统一的 aliQwen-api；DashScopeEmbeddings 默认只读 DASHSCOPE_API_KEY，故显式传入
 embeddings = DashScopeEmbeddings(
-    model="text-embedding-v4",
+    model="qwen3.7-text-embedding-flash",
     dashscope_api_key=os.getenv("aliQwen-api"),
 )
 
